@@ -1,0 +1,304 @@
+aux_loss: true
+backbone: resnet50
+batch_size: 1
+bbox_loss_coef: 5.0
+clip_max_norm: 0.1
+cls_loss_coef: 2.0
+coco_and_crowdhuman_prev_frame_rnd_augs: 0.2
+coco_min_num_objects: 0
+coco_panoptic_path: null
+coco_path: data/coco_2017
+coco_person_train_split: null
+crowdhuman_path: data/CrowdHuman
+crowdhuman_train_split: null
+dataset: mot
+debug: false
+dec_layers: 6
+dec_n_points: 4
+deformable: true
+device: cuda
+dice_loss_coef: 1.0
+dilation: false
+dim_feedforward: 1024
+dist_url: env://
+distributed: false
+dropout: 0.1
+enc_layers: 6
+enc_n_points: 4
+eos_coef: 0.1
+epochs: 100
+eval_only: false
+eval_train: false
+focal_alpha: 0.25
+focal_gamma: 5
+focal_loss: false
+freeze_detr: false
+giou_loss_coef: 2
+hidden_dim: 288
+img_transform: 
+  max_size: 1333
+  val_width: 800
+load_mask_head_from_model: null
+lr: 0.0001
+lr_backbone: 0.00001
+lr_backbone_names:
+- backbone.0
+lr_drop: 10
+lr_linear_proj_mult: 0.05
+lr_linear_proj_names:
+- reference_points
+- sampling_offsets
+lr_track: 0.00005
+mask_loss_coef: 1.0
+masks: false
+merge_frame_features: false
+mot_path_train: data/BKTRIS_TRAINING
+mot_path_val: data/BKTRIS_TRAINING
+multi_frame_attention: true
+multi_frame_attention_separate_encoder: true
+multi_frame_encoding: true
+nheads: 8
+no_vis: false
+num_feature_levels: 4
+num_queries: 50
+num_workers: 32
+output_dir: training_results/BKTRIS_TRAINING/experiment_8_8_train_2
+overflow_boxes: true
+overwrite_lr_scheduler: false
+overwrite_lrs: false
+position_embedding: sine
+pre_norm: false
+resume: models/mot17_deformable_multi_frame/checkpoint_epoch_50.pth
+resume_optim: false
+resume_shift_neuron: false
+resume_vis: false
+save_model_interval: 10
+seed: 64
+set_cost_bbox: 5.0
+set_cost_class: 2.0
+set_cost_giou: 2.0
+start_epoch: 1
+track_attention: true
+track_backprop_prev_frame: false
+track_prev_frame_range: 5
+track_prev_frame_rnd_augs: 0.01
+track_prev_prev_frame: false
+track_query_false_negative_prob: 0.4
+track_query_false_positive_eos_weight: true
+track_query_false_positive_prob: 0.1
+tracking: true
+tracking_eval: true
+train_split: train_coco
+two_stage: false
+val_interval: 1
+val_split: val_coco
+vis_and_log_interval: 1
+vis_port: 8097
+vis_server: http://localhost
+weight_decay: 0.00005
+with_box_refine: true
+world_size: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# lr: 0.004
+# lr_backbone_names: ['backbone.0']
+# lr_backbone: 0.004
+# lr_linear_proj_names: ['reference_points', 'sampling_offsets']
+# lr_linear_proj_mult: 2
+# lr_track: 0.002
+# overwrite_lrs: false
+# overwrite_lr_scheduler: false
+# batch_size: 4
+# weight_decay: 0.0001
+# #########################
+# epochs: 100
+# lr_drop: 7
+# #########################
+# # gradient clipping max norm
+# clip_max_norm: 0.1
+# # Deformable DETR
+# # deformable: true
+# # with_box_refine: true
+# two_stage: false
+# # Model parameters
+# freeze_detr: false
+# load_mask_head_from_model: null
+# # Backbone
+# # Name of the convolutional backbone to use. ('resnet50', 'resnet101')
+# backbone: resnet50
+# # If true, we replace stride with dilation in the last convolutional block (DC5)
+# dilation: false
+# # Type of positional embedding to use on top of the image features. ('sine', 'learned')
+# position_embedding: sine
+# # Number of feature levels the encoder processes from the backbone
+# # num_feature_levels: 1
+# # Transformer
+# # Number of encoding layers in the transformer
+# enc_layers: 6
+# # Number of decoding layers in the transformer
+# dec_layers: 6
+# # Intermediate size of the feedforward layers in the transformer blocks
+# dim_feedforward: 2048
+# # Size of the embeddings (dimension of the transformer)
+# hidden_dim: 256
+# # Dropout applied in the transformer
+# dropout: 0.1
+# # Number of attention heads inside the transformer's attentions
+# nheads: 8
+# # Number of object queries
+# pre_norm: false
+# dec_n_points: 4
+# enc_n_points: 4
+# # Tracking
+# tracking: true
+# tracking_eval: true
+# # Range of possible random previous frames
+# track_prev_frame_range: 0
+# track_prev_frame_rnd_augs: 0.01
+# track_prev_prev_frame: False
+# track_backprop_prev_frame: False
+# track_query_false_positive_prob: 0.1
+# track_query_false_negative_prob: 0.4
+# # # only for vanilla DETR
+# track_query_false_positive_eos_weight: true
+# track_attention: true
+# multi_frame_attention: true
+# multi_frame_encoding: true
+# multi_frame_attention_separate_encoder: true
+# merge_frame_features: false
+# # overflow_boxes: false
+# # Segmentation
+# masks: false
+# # Matcher
+# # Class coefficient in the matching cost
+# # set_cost_class: 1.0
+# # L1 box coefficient in the matching cost
+# set_cost_bbox: 5.0
+# # giou box coefficient in the matching cost
+# set_cost_giou: 2.0
+# # Loss
+# # Disables auxiliary decoding losses (loss at each layer)
+# aux_loss: true
+# mask_loss_coef: 1.0
+# dice_loss_coef: 1.0
+# cls_loss_coef: 1.0
+# bbox_loss_coef: 5.0
+# giou_loss_coef: 2
+# # Relative classification weight of the no-object class
+# eos_coef: 0.1
+# # focal_alpha: 0.25
+# # focal_gamma: 2
+# # Dataset
+# dataset: mot
+# # train_split: train
+# # val_split: val
+# coco_path: data/coco_2017
+# coco_panoptic_path: null
+# crowdhuman_path: data/CrowdHuman
+# # dataset: coco
+
+# # # mot_path_train: data/MOT17
+# # # mot_path_val: data/MOT17
+# train_split: train_coco
+# val_split: val_coco
+# mot_path_train: data/BKTRIS_TRAINING
+# mot_path_val: data/BKTRIS_TRAINING
+# # allows for joint training of mot and crowdhuman/coco_person with the `mot_crowdhuman`/`mot_coco_person` dataset
+# crowdhuman_train_split: null
+# coco_person_train_split: null
+# coco_and_crowdhuman_prev_frame_rnd_augs: 0.2
+# coco_min_num_objects: 0
+# img_transform:
+#   max_size: 1333
+#   val_width: 800
+# # Miscellaneous
+# # path where to save, empty for no saving
+# output_dir: results/BKTRIS_TRAINING/experiment_7_8_train_22
+# # device to use for training / testing
+# device: cuda
+# seed: 64
+
+# # resume from checkpoint
+# resume: models/mot17_crowdhuman_deformable_multi_frame/checkpoint_epoch_40.pth
+
+# resume_shift_neuron: false
+# # resume optimization from checkpoint
+# resume_optim: false
+# # resume Visdom visualization
+# resume_vis: false
+# start_epoch: 1
+# eval_only: false
+# eval_train: false
+# num_workers: 32
+# val_interval: 1
+# debug: false
+# # epoch interval for model saving. if 0 only save last and best models
+# save_model_interval: 10
+# # distributed training parameters
+# # number of distributed processes
+# world_size: 1
+# # url used to set up distributed training
+# dist_url: env://
+# # Visdom params
+# vis_server: http://localhost
+# # vis_server: ''
+# vis_port: 8097
+# vis_and_log_interval: 1
+# no_vis: false
+
+# #multi-frame
+# hidden_dim: 288
+# multi_frame_attention: true
+# multi_frame_encoding: true
+# multi_frame_attention_separate_encoder: true
+
+# #tracking
+# tracking: true
+# tracking_eval: true
+# track_prev_frame_range: 5
+# track_query_false_positive_eos_weight: true
+
+# #deformable
+# deformable: true
+# num_feature_levels: 4
+# num_queries: 50
+# dim_feedforward: 1024
+# focal_loss: false
+# focal_alpha: 0.25
+# focal_gamma: 5
+# cls_loss_coef: 2.0
+# set_cost_class: 2.0
+# overflow_boxes: true
+# with_box_refine: true
+
+# num_classes: 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
