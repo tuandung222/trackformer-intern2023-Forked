@@ -1,8 +1,10 @@
-- Please refrain from asking me questions as I may not be able to answer them. I apologize for any inconvenience. Also, please don't inquire about the code's appearance; I only started researching AI three months before my internship.
+- Please refrain from asking me questions as I may not be able to answer them. I apologize for any inconvenience. Also, please don't inquire about the code's appearance; I only started researching AI three months before my internship. Currently, I think my code is so stupid that I can't even look at it. I will update the code later. 
 
 - Unfortunately, I cannot release the data from my last internship in 2023 due to company policy. However, I will guide you through the training and tracking process with TrackFormer and provide some of my code to help you understand the process. Feel free to ask any questions, and I will do my best to assist you.
+
 - I have included some qualitative results in GIF format in the `output_videos` and `output_gifs` folders. You can view the tracking results with TrackFormer there.
-- This is my previous guide for training and tracking with TrackFormer. I have modified the code to support multi-class tracking. The code is not clean but functional, and I will update it later.
+
+- This is my previous guide for training and tracking with TrackFormer that I had written in 2023. I have modified the code to support multi-class tracking. The code is not clean but functional, and I will update it later.
     1. Raw training data, before splitting, is located in the "bktris_training_data" folder.
     2. Training data labels are in the "aws_annotations" folder.
     3. The trained model for vehicle tracking (4 classes) is in the "training_results" folder. Choose the best MOTA or best IDF1 model for tracking.
