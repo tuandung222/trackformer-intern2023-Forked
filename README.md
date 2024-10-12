@@ -1,6 +1,6 @@
 - Please refrain from asking me questions as I may not be able to answer them. I apologize for any inconvenience. Also, please don't inquire about the code's appearance; I only started researching AI three months before my internship. Currently, I think my code is so stupid that I can't even look at it. I will update the code later. 
 
-- Unfortunately, I cannot release the data from my last internship in 2023 due to company policy. However, I will guide you through the training and tracking process with TrackFormer and provide some of my code to help you understand the process. Feel free to ask any questions, and I will do my best to assist you.
+- Unfortunately, I cannot release the data from my last internship in 2023 due to company policy. However, I will guide you through the training and tracking process with TrackFormer and provide some of my code to help you understand the process. 
 
 - I have included some qualitative results in GIF format in the `output_videos` and `output_gifs` folders. You can view the tracking results with TrackFormer there.
 
